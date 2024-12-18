@@ -32,7 +32,9 @@ jobs:
 
     # Step 4: Build and test the project
     - name: Build and Test with Maven
-      run: mvn clean package -DskipTests
+      run: |
+        cd javaAdvanceTraining
+        mvn clean package -DskipTests
 
   docker-deploy:
     needs: build-and-test
